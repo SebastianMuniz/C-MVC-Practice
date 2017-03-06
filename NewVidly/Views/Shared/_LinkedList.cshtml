@@ -1,0 +1,20 @@
+﻿@model NewVidly.ViewModels.MoviesCustomers
+
+@if (Model.movieList != null && Model.movieList.Count != 0)
+{
+    <ul>
+        @foreach (var movie in Model.movieList)
+        {
+            <li>@Html.ActionLink(movie.Name, "Detail", "Movies", new { id = movie.Id }, null)</li>
+        }
+    </ul>
+}
+else if (Model.customerList != null && Model.customerList.Count != 0)
+{
+    <ul>
+        @foreach (var cli in Model.customerList)
+        {
+            <li>@Html.ActionLink(cli.Name, "Detail", "Customers", new { id = cli.Id }, null)</li>
+        }
+    </ul>
+}

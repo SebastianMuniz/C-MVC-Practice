@@ -1,0 +1,20 @@
+﻿@model NewVidly.ViewModels.MoviesCustomers
+
+@if (Model.movieList != null && Model.movieList.Count != 0)
+{
+    <ul>
+        @foreach (var movie in Model.movieList)
+        {
+            <li>@movie.Name</li>
+        }
+    </ul>
+}
+else if (Model.customerList != null && Model.customerList.Count != 0)
+{
+    <ul>
+        @foreach (var cli in Model.customerList)
+        {
+            <li>@cli.Name</li>
+        }
+    </ul>
+}
